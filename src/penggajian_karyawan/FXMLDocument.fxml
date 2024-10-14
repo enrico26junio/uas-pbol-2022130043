@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="penggajian_karyawan.FXMLDocumentController">
+   <children>
+      <TableView fx:id="tbtvkaryawan" layoutX="386.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Karyawan" />
+          <TableColumn prefWidth="75.0" text="Penggajian" />
+        </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PT.Indo Bersama Anugrah" wrappingWidth="375.6875">
+         <font>
+            <Font name="Imprint MT Shadow" size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="23.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Karyawan" />
+      <Text layoutX="23.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah Hari Kerja" />
+      <Text layoutX="23.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upah Per Hari" />
+      <TextField fx:id="namafield" layoutX="151.0" layoutY="172.0" />
+      <TextField fx:id="harifield" layoutX="151.0" layoutY="237.0" />
+      <TextField fx:id="upahfield" layoutX="151.0" layoutY="308.0" />
+      <Button fx:id="btnhitung" layoutX="342.0" layoutY="237.0" mnemonicParsing="false" onAction="#hitungklik" text="Hitung Gaji">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnhapus" layoutX="404.0" layoutY="317.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnkeluar" layoutX="495.0" layoutY="317.0" mnemonicParsing="false" onAction="#keluarklik" text="Keluar" textFill="RED">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="totalfield" layoutX="430.0" layoutY="237.0" />
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>
