@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="karyawan.FXMLTransactionController">
+    <children>
+        <VBox spacing="10" alignment="CENTER" prefWidth="500" prefHeight="400"
+              AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10"
+              AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+
+            <!-- Judul -->
+            <Label text="Input Data Transaksi" 
+                   style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+            <!-- GridPane untuk Input Form -->
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <children>
+                    <Label text="ID Transaksi:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                    <TextField fx:id="txtTransactionId" promptText="Masukkan ID Transaksi" 
+                               GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                    <Label text="ID Karyawan:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <TextField fx:id="txtTransactionEmployeeId" promptText="Masukkan ID Karyawan" 
+                               GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                    <Label text="Tanggal:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                    <TextField fx:id="txtTransactionDate" promptText="Masukkan Tanggal" 
+                               GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                    <Label text="Jumlah:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                    <TextField fx:id="txtTransactionAmount" promptText="Masukkan Jumlah" 
+                               GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                </children>
+            </GridPane>
+
+            <!-- Tombol Tambah -->
+            <Button text="Tambah Transaksi" onAction="#handleAddTransaction"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+
+            <!-- TableView untuk Menampilkan Transaksi -->
+            <TableView fx:id="tblTransactions" prefHeight="200">
+                <columns>
+                    <TableColumn text="ID Transaksi" fx:id="colTransactionId" prefWidth="100" />
+                    <TableColumn text="ID Karyawan" fx:id="colTransactionEmployeeId" prefWidth="150" />
+                    <TableColumn text="Tanggal" fx:id="colTransactionDate" prefWidth="150" />
+                    <TableColumn text="Jumlah" fx:id="colTransactionAmount" prefWidth="100" />
+                </columns>
+            </TableView>
+
+            <!-- Tombol Pindah ke Report -->
+            <Button text="Lihat Laporan" onAction="#handleViewReport" 
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+        </VBox>
+    </children>
+</AnchorPane>

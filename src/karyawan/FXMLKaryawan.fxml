@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="karyawan.FXMLKaryawanController">
+    <children>
+        <VBox spacing="15" alignment="CENTER" prefWidth="400" prefHeight="500"
+              AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <!-- Header -->
+            <Label text="Input Data Karyawan"
+                   style="-fx-font-size: 18; -fx-font-weight: bold; -fx-padding: 5;"/>
+
+            <!-- Input Form Section -->
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                    <RowConstraints minHeight="30"/>
+                </rowConstraints>
+                <children>
+                    <Label text="ID Karyawan:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtEmployeeId" promptText="Masukkan ID Karyawan" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Nama Karyawan:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtEmployeeName" promptText="Masukkan Nama Karyawan" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Posisi:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtEmployeePosition" promptText="Masukkan Posisi Karyawan" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Gaji:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtEmployeeSalary" promptText="Masukkan Gaji Karyawan" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                </children>
+            </GridPane>
+
+            <!-- Add Button -->
+            <Button text="Tambah"
+                    fx:id="btnAddEmployee"
+                    onAction="#handleAddEmployee"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <!-- Button to Transaction -->
+            <Button text="Pindah ke Transaksi"
+                    fx:id="btnGoToTransaction"
+                    onAction="#handleGoToTransaction"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <!-- Table Header -->
+            <Label text="Tabel Data Karyawan"
+                   style="-fx-font-size: 18; -fx-font-weight: bold; -fx-padding: 5;"/>
+
+            <!-- Table Section -->
+            <TableView fx:id="tblEmployees" prefHeight="250" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colEmployeeId" text="ID" prefWidth="100"/>
+                    <TableColumn fx:id="colEmployeeName" text="Nama" prefWidth="150"/>
+                    <TableColumn fx:id="colEmployeePosition" text="Posisi" prefWidth="150"/>
+                    <TableColumn fx:id="colEmployeeSalary" text="Gaji" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

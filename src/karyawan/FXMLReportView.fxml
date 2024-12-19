@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="karyawan.FXMLReportViewController">
+    <children>
+        <VBox spacing="10" alignment="CENTER" prefWidth="400" prefHeight="400">
+            <Label text="Laporan Data Karyawan"/>
+            <TableView fx:id="tblEmployeeReport" prefHeight="200">
+                <columns>
+                    <TableColumn text="ID" fx:id="colEmployeeReportId"/>
+                    <TableColumn text="Nama" fx:id="colEmployeeReportName"/>
+                    <TableColumn text="Posisi" fx:id="colEmployeeReportPosition"/>
+                    <TableColumn text="Gaji" fx:id="colEmployeeReportSalary"/>
+                </columns>
+            </TableView>
+
+            <Label text="Laporan Data Transaksi"/>
+            <TableView fx:id="tblTransactionReport" prefHeight="200">
+                <columns>
+                    <TableColumn text="ID Transaksi" fx:id="colTransactionReportId"/>
+                    <TableColumn text="ID Karyawan" fx:id="colTransactionReportEmployeeId"/>
+                    <TableColumn text="Tanggal" fx:id="colTransactionReportDate"/>
+                    <TableColumn text="Jumlah" fx:id="colTransactionReportAmount"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>
